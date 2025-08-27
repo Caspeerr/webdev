@@ -19,14 +19,17 @@
   justify-content: space-between; 
 }
 
-.info p {
+.div details {
   margin: 2px ;      
   font-size: 18px;
 }
+ 
+
 
 .socials {
   display: flex;
   gap: 15px;
+  align-items: flex-end;
 }
 
 .socials a {
@@ -37,7 +40,7 @@
   height: 35px;
   background: #fff;
   border-radius: 5px;
-  overflow: hidden;
+ 
 }
 
 .socials a img {
