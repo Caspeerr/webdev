@@ -1,0 +1,61 @@
+.card {
+  display: flex;
+  flex-flow: row nowrap;       
+  justify-content: space-between;
+  align-items: stretch;        
+  border: 1px solid #000;
+  max-width: 800px;
+  margin: 20px auto;
+  height: 400px;               
+}
+
+.info {
+  flex: 1;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.info p {
+  margin: 2px ;      
+  font-size: 18px;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.socials a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.photo {
+  flex: 1.5;                   
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            
+}
