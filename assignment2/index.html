@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ID Card Generator</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student ID Generator</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- FORM -->
-  <div id="formContainer">
-    <h2>Enter Your Details</h2>
+<div class="form-wrapper" id="formWrapper">
+  <form id="studentForm">
+    <h2>Create Student ID</h2>
 
-    <form id="userForm">
+    <label for="nameInput">Full Name</label>
+    <input type="text" id="nameInput" placeholder="Enter full name" required>
 
-      <label>Name:</label>
-      <input type="text" id="nameInput" required>
+    <label for="idInput">Student ID</label>
+    <input type="text" id="idInput" placeholder="Enter student ID" required>
 
-      <label>ID Number:</label>
-      <input type="text" id="idNumberInput" required>
+    <label for="facultyInput">Department / Class</label>
+    <input type="text" id="facultyInput" placeholder="Enter course or department" required>
 
-      <label>Faculty:</label>
-      <input type="text" id="facultyInput" required>
+    <label for="photoInput">Upload Photo</label>
+    <input type="file" id="photoInput" accept="image/*">
 
-      <label>Concentration:</label>
-      <input type="text" id="concentrationInput" required>
+    <button type="submit">Generate Card</button>
+  </form>
+</div>
 
-      <button type="submit">Generate ID Card</button>
-    </form>
-  </div>
-
-
-  <!-- ID CARD (HIDDEN INITIALLY) -->
-  <div class="card" id="idCard" style="display:none;">
-    <div class="info">
-      <div class="details">
-        <p><b>Name:</b> <span id="showName"></span></p>
-        <p><b>ID No:</b> <span id="showIdNumber"></span></p>
-        <p><b>Faculty:</b> <span id="showFaculty"></span></p>
-        <p><b>Concentration:</b> <span id="showConcentration"></span></p>
-      </div>
-
-      <div class="socials">
-        <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
-        <a href="https://www.instagram.com/"><img src="images/instagram.png"></a>
-      </div>
+<div class="id-card" id="idCard" style="display:none;">
+  <div class="info">
+    <div class="details">
+      <p><b>Name:</b> <span id="showName"></span></p>
+      <p><b>ID No:</b> <span id="showID"></span></p>
+      <p><b>Department:</b> <span id="showFaculty"></span></p>
     </div>
-
-    <div class="photo">
-      <img id="showPhoto" src="images/Untitled.png" alt="">
+  
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://www.twitter.com" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="X/Twitter">
+      </a>
     </div>
   </div>
+  <div class="photo">
+    <img id="showPhoto" src="" alt="Student Photo">
+  </div>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
