@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Card Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- FORM -->
+  <div id="formContainer">
+    <h2>Enter Your Details</h2>
+
+    <form id="userForm">
+
+      <label>Name:</label>
+      <input type="text" id="nameInput" required>
+
+      <label>ID Number:</label>
+      <input type="text" id="idNumberInput" required>
+
+      <label>Faculty:</label>
+      <input type="text" id="facultyInput" required>
+
+      <label>Concentration:</label>
+      <input type="text" id="concentrationInput" required>
+
+      <button type="submit">Generate ID Card</button>
+    </form>
+  </div>
+
+
+  <!-- ID CARD (HIDDEN INITIALLY) -->
+  <div class="card" id="idCard" style="display:none;">
+    <div class="info">
+      <div class="details">
+        <p><b>Name:</b> <span id="showName"></span></p>
+        <p><b>ID No:</b> <span id="showIdNumber"></span></p>
+        <p><b>Faculty:</b> <span id="showFaculty"></span></p>
+        <p><b>Concentration:</b> <span id="showConcentration"></span></p>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.facebook.com/"><img src="images/facebook.png"></a>
+        <a href="https://www.instagram.com/"><img src="images/instagram.png"></a>
+      </div>
+    </div>
+
+    <div class="photo">
+      <img id="showPhoto" src="images/Untitled.png" alt="">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
