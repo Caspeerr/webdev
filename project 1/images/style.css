@@ -1,0 +1,505 @@
+/* ============================================
+  GRAPHIC DESIGNER PORTFOLIO
+  Enhanced with Microsoft AI Design Elements
+  ============================================ */
+
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   background-color: #e0beb0;
+   line-height: 1.6;
+   overflow-x: hidden;
+   transition: background-color 0.8s ease;
+   font-size: 16px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: #333333;
+}
+
+/* ============================================
+  HEADER & NAVIGATION
+  ============================================ */
+.header {
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+   background: rgba(255, 255, 255, 0.95);
+   backdrop-filter: blur(10px);
+   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+   padding: 16px 0;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 32px;
+   max-width: 1400px;
+   margin: 0 auto;
+   gap: 32px;
+}
+
+.search-box {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   min-width: 200px;
+}
+
+.search-icon {
+   font-size: 19px;
+   color: #999999;
+   transition: color 0.3s ease;
+}
+
+.search-input {
+   flex: 1;
+   padding: 10px 13px;
+   border: 2px solid #d4956e;
+   border-radius: 6px;
+   background: rgba(255, 255, 255, 0.8);
+   font-size: 15px;
+   transition: all 0.3s ease;
+   font-family: 'Segoe UI', sans-serif;
+}
+
+.search-input:focus {
+   outline: none;
+   border-color: #c17a52;
+   background: #ffffff;
+   box-shadow: 0 2px 8px rgba(193, 122, 82, 0.1);
+}
+
+.search-input::placeholder {
+   color: #999999;
+}
+
+.logo {
+   font-size: 28px;
+   font-weight: 700;
+   color: #d4956e;
+   letter-spacing: 2px;
+   transition: color 0.3s ease;
+}
+
+.logo:hover {
+   color: #c17a52;
+}
+
+.nav-links {
+   display: flex;
+   gap: 32px;
+   margin-left: auto;
+}
+
+.nav-link {
+   text-decoration: none;
+   font-weight: 500;
+   font-size: 15px;
+   transition: all 0.3s ease;
+   color: #666666;
+   position: relative;
+}
+
+.nav-link::after {
+   content: '';
+   position: absolute;
+   bottom: -4px;
+   left: 0;
+   width: 0;
+   height: 2px;
+   background-color: #d4956e;
+   transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+   color: #c17a52;
+}
+
+.nav-link:hover::after {
+   width: 100%;
+}
+
+/* ============================================
+  HERO SECTION
+  ============================================ */
+.hero-section {
+   position: relative;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+   background: linear-gradient(135deg, #e0beb0 0%, #d4956e 100%);
+   font-family: 'Segoe UI', sans-serif;
+}
+
+.hero-section::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+               radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.05) 0%, transparent 50%);
+   pointer-events: none;
+}
+
+.hero-content {
+   position: relative;
+   z-index: 10;
+   text-align: center;
+   color: #ffffff;
+   max-width: 900px;
+   padding: 32px;
+   animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+   from {
+       opacity: 0;
+       transform: translateY(30px);
+   }
+   to {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+
+.hero-title {
+   font-family: 'Playfair Display', serif;
+   font-size: 100px;
+   font-weight: 700;
+   font-style: italic;
+   line-height: 1.1;
+   margin-bottom: 16px;
+   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   letter-spacing: -1px;
+}
+
+.hero-subtitle {
+   font-size: 24px;
+   font-weight: 300;
+   letter-spacing: 0.5px;
+   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+  FULL-PAGE SECTIONS
+  ============================================ */
+section {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 60px 32px;
+}
+
+.section-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   width: 100%;
+}
+
+.section-title {
+   font-size: 48px;
+   font-weight: 700;
+   margin-bottom: 40px;
+   color: #333333;
+   letter-spacing: -0.5px;
+}
+
+/* ============================================
+  ABOUT SECTION
+  ============================================ */
+.about-content {
+   display: flex;
+   gap: 48px;
+   align-items: center;
+   flex-wrap: wrap;
+   font-family: 'Segoe UI', sans-serif;
+}
+
+.about-image {
+   width: 250px;
+   height: 250px;
+   border-radius: 12px;
+   object-fit: cover;
+   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+   transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+   transform: scale(1.05);
+}
+
+.about-content p {
+   font-size: 18px;
+   line-height: 1.8;
+   color: #555555;
+   flex: 1;
+   min-width: 300px;
+}
+
+/* ============================================
+  PROJECTS SECTION
+  ============================================ */
+.projects-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 32px;
+   font-family: 'Segoe UI', sans-serif;
+}
+
+.project-card {
+   background: #ffffff;
+   padding: 28px;
+   border-radius: 12px;
+   border: 1px solid rgba(0, 0, 0, 0.08);
+   text-align: center;
+   transition: all 0.3s ease;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+   overflow: hidden;
+   position: relative;
+}
+
+.project-card::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 4px;
+   background: linear-gradient(90deg, #d4956e, #c17a52);
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: transform 0.3s ease;
+}
+
+.project-card:hover::before {
+   transform: scaleX(1);
+}
+
+.project-card img {
+   width: 100%;
+   border-radius: 8px;
+   margin-bottom: 20px;
+   transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+   transform: scale(1.05);
+}
+
+.project-card h3 {
+   font-size: 20px;
+   font-weight: 600;
+   margin-bottom: 12px;
+   color: #333333;
+}
+
+.project-card p {
+   font-size: 15px;
+   color: #777777;
+}
+
+.project-card:hover {
+   border-color: #d4956e;
+   box-shadow: 0 12px 32px rgba(212, 149, 110, 0.15);
+   transform: translateY(-8px);
+}
+
+/* ============================================
+  SKILLS SECTION
+  ============================================ */
+.skills-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+   gap: 24px;
+   justify-items: center;
+   font-family: 'Segoe UI', sans-serif;
+}
+
+.skill-card {
+   background: #ffffff;
+   padding: 24px 16px;
+   border-radius: 12px;
+   border: 1px solid rgba(0, 0, 0, 0.08);
+   text-align: center;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+   position: relative;
+}
+
+.skill-card::after {
+   content: '';
+   position: absolute;
+   inset: 0;
+   border-radius: 12px;
+   background: linear-gradient(135deg, rgba(212, 149, 110, 0.1), transparent);
+   opacity: 0;
+   transition: opacity 0.3s ease;
+   pointer-events: none;
+}
+
+.skill-card img {
+   width: 60px;
+   height: 60px;
+   margin-bottom: 12px;
+   transition: transform 0.3s ease;
+}
+
+.skill-card:hover img {
+   transform: scale(1.15) rotate(5deg);
+}
+
+.skill-card p {
+   font-weight: 500;
+   font-size: 15px;
+   color: #555555;
+   transition: color 0.3s ease;
+}
+
+.skill-card:hover {
+   border-color: #d4956e;
+   box-shadow: 0 12px 32px rgba(212, 149, 110, 0.15);
+   transform: translateY(-8px);
+}
+
+.skill-card:hover::after {
+   opacity: 1;
+}
+
+.skill-card:hover p {
+   color: #d4956e;
+}
+
+/* ============================================
+  FOOTER
+  ============================================ */
+.footer {
+   background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+   color: #ffffff;
+   padding: 40px 32px;
+   text-align: center;
+   font-family: 'Segoe UI', sans-serif;
+   min-height: auto;
+}
+
+.footer-content p {
+   font-size: 15px;
+   opacity: 0.9;
+   transition: opacity 0.3s ease;
+}
+
+.footer-content p:hover {
+   opacity: 1;
+}
+
+/* ============================================
+  RESPONSIVE DESIGN
+  ============================================ */
+@media (max-width: 1024px) {
+   .hero-title {
+       font-size: 80px;
+   }
+   
+   .section-title {
+       font-size: 40px;
+   }
+   
+   .navbar {
+       padding: 0 20px;
+       gap: 20px;
+   }
+}
+
+@media (max-width: 768px) {
+   .hero-title {
+       font-size: 60px;
+   }
+   
+   .hero-subtitle {
+       font-size: 20px;
+   }
+   
+   .section-title {
+       font-size: 32px;
+   }
+   
+   .navbar {
+       padding: 0 16px;
+       gap: 16px;
+   }
+   
+   .nav-links {
+       gap: 16px;
+   }
+   
+   .about-content {
+       gap: 24px;
+   }
+   
+   .about-image {
+       width: 200px;
+       height: 200px;
+   }
+   
+   .projects-grid {
+       grid-template-columns: 1fr;
+   }
+   
+   .skills-grid {
+       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+       gap: 16px;
+   }
+}
+
+@media (max-width: 480px) {
+   .hero-title {
+       font-size: 40px;
+   }
+   
+   .hero-subtitle {
+       font-size: 18px;
+   }
+   
+   .section-title {
+       font-size: 24px;
+   }
+   
+   .navbar {
+       flex-direction: column;
+       gap: 12px;
+       padding: 12px;
+   }
+   
+   .search-box {
+       width: 100%;
+       min-width: unset;
+   }
+   
+   .nav-links {
+       width: 100%;
+       justify-content: space-around;
+       gap: 8px;
+   }
+   
+   .skill-card img {
+       width: 50px;
+       height: 50px;
+   }
+}
