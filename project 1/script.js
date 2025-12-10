@@ -1,5 +1,5 @@
 // Select all sections for scroll-based color transitions
-const sections = document.querySelectorAll('section, .hero-section');
+const sections = document.querySelectorAll('section');
 const body = document.body;
 
 const colors = [ '#e0beb0', '#e9b9aaff', '#b3c7ce', '#c29f88ff'  ];
